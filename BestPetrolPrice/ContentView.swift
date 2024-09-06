@@ -1,21 +1,17 @@
-//
-//  ContentView.swift
-//  BestPetrolPrice
-//
-//  Created by Michael on 06.09.24.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    let contentVM = ContentViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        List {
+            ForEach(contentVM.stations) { station in
+                Text(station.name)
+            }
+        }.listStyle(.plain)
+        .task {
+            await contentVM.fetchData()
         }
-        .padding()
     }
 }
 
