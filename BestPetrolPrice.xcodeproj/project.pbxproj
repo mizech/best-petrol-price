@@ -17,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C75C7442C8B3C35001508D3 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		4C75C7452C8B3C67001508D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4CC976CD2C8AF3B400C2822A /* BestPetrolPrice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestPetrolPrice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC976D02C8AF3B400C2822A /* BestPetrolPriceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestPetrolPriceApp.swift; sourceTree = "<group>"; };
 		4CC976D22C8AF3B400C2822A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,12 +59,14 @@
 		4CC976CF2C8AF3B400C2822A /* BestPetrolPrice */ = {
 			isa = PBXGroup;
 			children = (
+				4C75C7452C8B3C67001508D3 /* Info.plist */,
 				4CC976E12C8AF4D700C2822A /* Models */,
 				4CC976E02C8AF4CC00C2822A /* ViewModels */,
 				4CC976D02C8AF3B400C2822A /* BestPetrolPriceApp.swift */,
 				4CC976D22C8AF3B400C2822A /* ContentView.swift */,
 				4CC976D42C8AF3B500C2822A /* Assets.xcassets */,
 				4CC976D62C8AF3B500C2822A /* Preview Content */,
+				4C75C7442C8B3C35001508D3 /* Config.xcconfig */,
 			);
 			path = BestPetrolPrice;
 			sourceTree = "<group>";
@@ -175,6 +179,7 @@
 /* Begin XCBuildConfiguration section */
 		4CC976D92C8AF3B500C2822A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C75C7442C8B3C35001508D3 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -238,6 +243,7 @@
 		};
 		4CC976DA2C8AF3B500C2822A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C75C7442C8B3C35001508D3 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -294,6 +300,7 @@
 		};
 		4CC976DC2C8AF3B500C2822A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C75C7442C8B3C35001508D3 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -303,6 +310,7 @@
 				DEVELOPMENT_TEAM = JL37ZH7ZSY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BestPetrolPrice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -323,6 +331,7 @@
 		};
 		4CC976DD2C8AF3B500C2822A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C75C7442C8B3C35001508D3 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -332,6 +341,7 @@
 				DEVELOPMENT_TEAM = JL37ZH7ZSY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BestPetrolPrice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

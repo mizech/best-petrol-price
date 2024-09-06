@@ -1,0 +1,10 @@
+//
+//  Config.xcconfig
+//  BestPetrolPrice
+//
+//  Created by Michael on 06.09.24.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+API_KEY = 00000000-0000-0000-0000-000000000002
