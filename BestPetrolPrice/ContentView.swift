@@ -10,6 +10,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
+            Text("\(contentVM.stations.count) petrol stations within a radius of \(selectedRadius)")
             VStack {
                 List {
                     ForEach(contentVM.stations) { station in
@@ -17,15 +18,22 @@ struct ContentView: View {
                     }
                 }.listStyle(.plain)
                     .onChange(of: selectedType) { oldValue, newValue in
-                        print(oldValue, newValue)
+                        Task {
+                            await contentVM.fetchData(radius: String(selectedRadius), type: selectedType)
+                        }
+                    }
+                    .onChange(of: selectedRadius) { oldValue, newValue in
+                        Task {
+                            await contentVM.fetchData(radius: String(selectedRadius), type: selectedType)
+                        }
                     }
             }
             .toolbar(content: {
                 ToolbarItem(placement: .topBarTrailing) {
-                    Menu("Petrol Type", systemImage: "gear") {
+                    Menu("Petrol Type", systemImage: "fuelpump") {
                         Picker("Type", selection: $selectedType) {
                             ForEach(types, id: \.self) { type in
-                                Text(type).tag(type)
+                                Text(type.capitalized).tag(type)
                             }
                         }
                     }
@@ -34,10 +42,10 @@ struct ContentView: View {
             })
             .toolbar(content: {
                 ToolbarItem(placement: .topBarTrailing) {
-                    Menu("Radius (km)", systemImage: "star") {
+                    Menu("Radius (km)", systemImage: "circle.circle") {
                         Picker("Radius", selection: $selectedRadius) {
                             ForEach(radius, id: \.self) { currRadius in
-                                Text("\(currRadius)").tag(currRadius)
+                                Text("\(currRadius) km").tag(currRadius)
                             }
                         }
                     }
@@ -45,7 +53,7 @@ struct ContentView: View {
             })
         }
         .task {
-            await contentVM.fetchData()
+            await contentVM.fetchData(radius: String(selectedRadius), type: "all")
         }
     }
 }
