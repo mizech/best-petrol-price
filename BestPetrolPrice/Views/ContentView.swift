@@ -16,7 +16,7 @@ struct ContentView: View {
                 List {
                     ForEach(contentVM.stations) { station in
                         NavigationLink {
-                            StationDetails()
+                            StationDetails(station: station)
                         } label: {
                             VStack(alignment: .leading) {
                                 Text(station.name)
