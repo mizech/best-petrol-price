@@ -8,7 +8,7 @@ class ContentViewModel {
         let apiKey = Bundle.main.infoDictionary?["API_KEY"] as? String
         
         if let apiKey = apiKey {
-            let urlStr = "https://creativecommons.tankerkoenig.de/json/list.php?lat=52.521&lng=13.438&rad=\(radius)&sort=dist&type=\(type)&apikey=\(apiKey)"
+            let urlStr = "https://creativecommons.tankerkoenig.de/json/list.php?lat=49.39239&lng=6.7018&rad=\(radius)&sort=dist&type=\(type)&apikey=\(apiKey)"
             if let url = URL(string: urlStr) {
                 do {
                     let (data, _) = try await URLSession.shared.data(from: url)

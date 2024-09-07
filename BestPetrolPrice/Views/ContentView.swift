@@ -10,11 +10,20 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            Text("\(contentVM.stations.count) petrol stations within a radius of \(selectedRadius)")
+            Text("Radius: \(selectedRadius) km -> \(contentVM.stations.count) petrol stations")
+                .bold()
             VStack {
                 List {
                     ForEach(contentVM.stations) { station in
-                        Text(station.name)
+                        NavigationLink {
+                            StationDetails()
+                        } label: {
+                            VStack(alignment: .leading) {
+                                Text(station.name)
+                                    .bold()
+                                Text(station.street)
+                            }
+                        }
                     }
                 }.listStyle(.plain)
                     .onChange(of: selectedType) { oldValue, newValue in

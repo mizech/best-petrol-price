@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C82CD942C8C1CC300A604C9 /* StationDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C82CD932C8C1CC300A604C9 /* StationDetails.swift */; };
 		4CC976D12C8AF3B400C2822A /* BestPetrolPriceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC976D02C8AF3B400C2822A /* BestPetrolPriceApp.swift */; };
 		4CC976D32C8AF3B400C2822A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC976D22C8AF3B400C2822A /* ContentView.swift */; };
 		4CC976D52C8AF3B500C2822A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CC976D42C8AF3B500C2822A /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		4C75C7442C8B3C35001508D3 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		4C75C7452C8B3C67001508D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4C82CD932C8C1CC300A604C9 /* StationDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetails.swift; sourceTree = "<group>"; };
 		4CC976CD2C8AF3B400C2822A /* BestPetrolPrice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestPetrolPrice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC976D02C8AF3B400C2822A /* BestPetrolPriceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestPetrolPriceApp.swift; sourceTree = "<group>"; };
 		4CC976D22C8AF3B400C2822A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +42,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C82CD922C8C1CAA00A604C9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4CC976D22C8AF3B400C2822A /* ContentView.swift */,
+				4C82CD932C8C1CC300A604C9 /* StationDetails.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		4CC976C42C8AF3B400C2822A = {
 			isa = PBXGroup;
 			children = (
@@ -60,10 +71,10 @@
 			isa = PBXGroup;
 			children = (
 				4C75C7452C8B3C67001508D3 /* Info.plist */,
+				4C82CD922C8C1CAA00A604C9 /* Views */,
 				4CC976E12C8AF4D700C2822A /* Models */,
 				4CC976E02C8AF4CC00C2822A /* ViewModels */,
 				4CC976D02C8AF3B400C2822A /* BestPetrolPriceApp.swift */,
-				4CC976D22C8AF3B400C2822A /* ContentView.swift */,
 				4CC976D42C8AF3B500C2822A /* Assets.xcassets */,
 				4CC976D62C8AF3B500C2822A /* Preview Content */,
 				4C75C7442C8B3C35001508D3 /* Config.xcconfig */,
@@ -169,6 +180,7 @@
 				4CC976E32C8AF4EB00C2822A /* Response.swift in Sources */,
 				4CC976E52C8AF4F500C2822A /* Station.swift in Sources */,
 				4CC976D32C8AF3B400C2822A /* ContentView.swift in Sources */,
+				4C82CD942C8C1CC300A604C9 /* StationDetails.swift in Sources */,
 				4CC976D12C8AF3B400C2822A /* BestPetrolPriceApp.swift in Sources */,
 				4CC976DF2C8AF43500C2822A /* ContentViewModel.swift in Sources */,
 			);
