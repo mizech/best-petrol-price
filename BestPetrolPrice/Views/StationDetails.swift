@@ -7,25 +7,28 @@ struct StationDetails: View {
         Form {
             Section {
                 Text(station.name)
+                    .bold()
                 Text("\(station.street) \(station.houseNumber)")
                 Text("\(station.postCode) \(station.place)")
+                Text("Currently \(station.isOpen == true ? "open" : "closed")")
+                    .foregroundStyle(station.isOpen ? .green : .red)
             } header: {
                 Text("Address Information")
             }
             Section {
-                Text("\(station.diesel) €")
+                Text(String(format: "%.2f €", station.diesel))
             } header: {
                 Text("Diesel-Price")
             }
             Section {
-                Text("\(station.e5) €")
+                Text(String(format: "%.2f €", station.e5))
             } header: {
                 Text("E5-Price")
             }
             Section {
-                Text("\(station.e10) €")
+                Text(String(format: "%.2f €", station.e10))
             } header: {
-                Text("E5-Price")
+                Text("E10-Price")
             }
         }
     }
@@ -42,7 +45,7 @@ struct StationDetails: View {
             diesel: 3.0,
             e5: 3.0,
             e10: 3.10,
-            isOpen: true,
+            isOpen: false,
             houseNumber: "87",
             postCode: 49
         )
